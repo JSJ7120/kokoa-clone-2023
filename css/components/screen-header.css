@@ -14,4 +14,33 @@
 
 .screen-header__icons span {
   margin-left: 25px;
+  position: relative;
+}
+
+.screen-header__icons-dot {
+  position: absolute;
+  display: flex;
+  width: 5px;
+  height: 5px;
+  background-color: tomato;
+  border-radius: 15px;
+  right: -9px;
+  top: -3px;
+}
+
+@keyframes rotateCog {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.screen-header__icons .fa-gear:hover {
+  animation: rotateCog 2s linear infinite;
+}
+
+.screen-header__icons {
+  cursor: pointer;
 }
